@@ -5,29 +5,28 @@ Button buttonTerning20 = new Button(10, 110, 150, 50, "Slå med 20s terning!");
 int sum;
 int terningeKast;
 
+Terning t = new Terning(); 
+
 void setup() {
   size(500, 300); 
 
   buttonTerning6.addAction(new Action() {   
     public void execute() {
-      terningeKast = int(random(1, 7));
-      sum += terningeKast;
+      t.kastTerning(1, 6);
     }
   }
   );
 
   buttonTerning10.addAction(new Action() {   
     public void execute() {
-      terningeKast = int(random(1, 11));
-      sum += terningeKast;
+      t.kastTerning(1, 10);
     }
   }
   );
 
   buttonTerning20.addAction(new Action() {   
     public void execute() {
-      terningeKast = int(random(1, 21));
-      sum += terningeKast;
+      t.kastTerning(1, 20);
     }
   }
   );

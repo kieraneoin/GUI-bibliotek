@@ -16,7 +16,7 @@ class Button {
   void addAction(Action a) {
     this.a=a;
   }
-//det der viser min kode
+//det der viser min knap
   void display() {
     rect(x, y, w, h);
     fill(0);
