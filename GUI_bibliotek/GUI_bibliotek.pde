@@ -1,5 +1,6 @@
 Button buttonTerning6 = new Button(10, 10, 150, 50, "Slå med 6s terning!");
 Button buttonTerning10 = new Button(340, 10, 150, 50, "Slå med 10s terning!");
+Button buttonTerning20 = new Button(10, 110, 150, 50, "Slå med 20s terning!");
 
 int sum;
 int terningeKast;
@@ -9,7 +10,7 @@ void setup() {
 
   buttonTerning6.addAction(new Action() {   
     public void execute() {
-      terningeKast = int(random(1, 6));
+      terningeKast = int(random(1, 7));
       sum += terningeKast;
     }
   }
@@ -17,7 +18,15 @@ void setup() {
 
   buttonTerning10.addAction(new Action() {   
     public void execute() {
-      terningeKast = int(random(1, 10));
+      terningeKast = int(random(1, 11));
+      sum += terningeKast;
+    }
+  }
+  );
+
+  buttonTerning20.addAction(new Action() {   
+    public void execute() {
+      terningeKast = int(random(1, 21));
       sum += terningeKast;
     }
   }
@@ -28,6 +37,8 @@ void draw() {
   clear();
   buttonTerning6.display();
   buttonTerning10.display();
+  buttonTerning20.display();
+
   fill(255);
   textAlign(CENTER);
   text("Du har kastet " + terningeKast, width/2, 200);
@@ -37,4 +48,5 @@ void draw() {
 void mousePressed() {
   buttonTerning6.click();
   buttonTerning10.click();
+  buttonTerning20.click();
 }
