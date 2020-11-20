@@ -1,11 +1,12 @@
-Button buttonTerning6 = new Button(10, 10, 150, 50, "Slå med 6s terning!");
-Button buttonTerning10 = new Button(340, 10, 150, 50, "Slå med 10s terning!");
-Button buttonTerning20 = new Button(10, 110, 150, 50, "Slå med 20s terning!");
+Button buttonTerning6 = new Button(10, 10, 150, 50, "Slå med 6s terning!",this);
+Button buttonTerning10 = new Button(340, 10, 150, 50, "Slå med 10s terning!",this);
+Button buttonTerning20 = new Button(10, 110, 150, 50, "Slå med 20s terning!",this);
 
 int sum;
 int terningeKast;
 
-Terning t = new Terning(); 
+
+Terning t = new Terning(this); 
 
 void setup() {
   size(500, 300); 
